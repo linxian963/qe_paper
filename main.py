@@ -9,9 +9,9 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QThread
 
 from beauty_UI import beauty
-from pyqt5界面.ui_MainWindow import Ui_MainWindow
-from pyqt5界面.child_GUI.read_windows import read_Window
-from pyqt5界面.child_GUI.QVAR_windows import QVAR
+from pyqt5webpage.ui_MainWindow import Ui_MainWindow
+from pyqt5webpage.child_GUI.read_windows import read_Window
+from pyqt5webpage.child_GUI.QVAR_windows import QVAR
 
 # 继承QThread
 
@@ -61,7 +61,7 @@ class QmyMainWindow(QMainWindow):
         self.func = Quantile_Granger()   # 导入主函数
         self.init_parameter()            # 初始化各参数
         # 默认导入测试数据
-        self.df = pd.read_excel(r'.\data\测试数据.xlsx')
+        self.df = pd.read_excel(r'/Users/huanglinxian/Desktop/hlx_nb/Quantile/data/test_data.xlsx')
         self.df = self.df.drop(self.df.columns[0], axis=1)
 
 # ==============自定义功能函数========================
